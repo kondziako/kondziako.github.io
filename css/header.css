@@ -1,0 +1,120 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center; /* Alinea verticalmente los elementos */
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+}
+.espacio {
+    padding-left: 300px;
+
+}
+
+.logo {
+    font-size: 20px;
+    padding-left: 16px;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: grey;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column; /* Cambia a dirección de columna para dispositivos móviles */
+        position: absolute;
+        top: 60px; /* Ajusta la posición de la lista desplegable */
+        left: 0;
+        background-color: #333; /* Fondo para la lista desplegable */
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin-right: 0;
+        padding: 10px 0; /* Espaciado en elementos de lista */
+    }
+
+    .nav-links li a {
+        margin: 0;
+        padding: 10px 20px; /* Ajusta el espacio dentro de los enlaces */
+        display: block; /* Hace que los enlaces ocupen todo el ancho */
+    }
+}
+
+ol, ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+    padding: 20px 0 20px;
+    vertical-align: middle;
+}
+a:hover, a:focus, a:active {
+    color: #8feff8;
+    text-decoration: none;
+}
+.a_underline {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s;
+}
+.a_underline {
+    position: relative;
+    display: block;
+    padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+    color: #ffffff;
+}
+.a_underline::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+.a_underline:active::before {
+    background-color: #fffdfd;
+}
+.a_underline:hover::before, a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
